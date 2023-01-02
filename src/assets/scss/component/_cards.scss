@@ -1,0 +1,25 @@
+.card {
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    &:hover{
+        transform: translateY(-30px);
+        .start-cooking{
+            background-color: $secondary;
+            color: white;
+            border-radius: 0 0 15px 15px;
+        }
+    }
+}
+
+.card-img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+}
+
+@each $name,$color in $theme-colors {
+    .badge-#{$name} {
+        color: $color;
+        background-color: lighten($color, 30);
+    }
+}
